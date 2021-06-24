@@ -8,13 +8,20 @@ import com.miqt.pluginlib.annotation.IgnoreMethodHook
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        hello1()
-        hello2()
-        hello3()
-        hello4()
-        hello4()
+        try {
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.activity_main)
+            hello1()
+            hello2()
+            try {
+                hello3()
+                hello4()
+            } catch (e: Exception) {
+            }
+            hello4()
+        } catch (e: Exception) {
+        } finally {
+        }
     }
 
     fun hello1() {
@@ -52,6 +59,7 @@ class MainActivity : AppCompatActivity() {
     fun case3() {
 
     }
+
 
 
 }

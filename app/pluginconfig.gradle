@@ -1,0 +1,22 @@
+apply plugin: 'com.miqt.plugin.autotrycatch'
+AutoTryCatch {
+    buildLog = true
+    injectJar = false
+    enable = true
+    handleClass='com.asm.code.MethodHookPrint'
+    handleMethod='point'
+}
+//apply plugin: 'com.miqt.plugin.hookmethod'
+//hook_method {
+//    classWhiteListRegex = [".*"]
+//    buildLog = true
+//    injectJar = false
+//    enable = true
+//    runVariant = "debug"
+//}
+//apply plugin: 'com.miqt.plugin.sample'
+//sample_extension {
+//    buildLog = true
+//    injectJar = false
+//    enable = true
+//}

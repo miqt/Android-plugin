@@ -15,6 +15,7 @@ plugins {
     // 这个 id 就是在 .\plugin\method_hook 文件夹下 build.gradle 文件内定义的id
     id "sample-plugin" apply false
     id "hook-method-plugin" apply false
+    id "AutoTryCatch-plugin" apply false
 }
 
 allprojects {

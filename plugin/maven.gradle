@@ -2,7 +2,7 @@ apply plugin: 'maven'
 apply plugin: 'com.github.panpf.bintray-publish'
 
 
-def maven_version = "0.3.5"
+def maven_version = "0.3.7"
 def maven_groupId = 'com.miqt'
 
 //下面的version和group必须有，gradle打包的pom文件依赖这个版本号和group
@@ -15,7 +15,9 @@ uploadArchives {
     repositories {
         mavenDeployer {
 
-            repository(url: uri(project.parent.rootDir.path + './repo'))
+//            repository(url: uri(project.parent.rootDir.path + './repo'))
+
+            repository(url: uri('E:\\maven'))
 
             pom.project {
                 name maven_artifactId

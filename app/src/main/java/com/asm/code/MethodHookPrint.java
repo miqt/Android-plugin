@@ -59,5 +59,9 @@ public class MethodHookPrint implements IMethodHookHandler {
         Arrays.fill(value, '┆');
         return new String(value);
     }
+    public static void point(Throwable throwable) {
+        throwable.printStackTrace();
+    }
+
 
 }

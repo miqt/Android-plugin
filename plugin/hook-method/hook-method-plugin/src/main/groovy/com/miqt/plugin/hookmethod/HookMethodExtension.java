@@ -2,7 +2,6 @@ package com.miqt.plugin.hookmethod;
 
 import com.miqt.asm.method_hook.Extension;
 
-import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;

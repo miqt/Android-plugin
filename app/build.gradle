@@ -3,20 +3,7 @@ plugins {
     id 'kotlin-android'
 }
 
-apply plugin: 'com.miqt.plugin.hookmethod'
-//apply plugin: 'com.miqt.plugin.sample'
-//sample_extension{
-//    buildLog = true
-//    injectJar = true
-//}
-hook_method {
-    classWhiteListRegex = [".*"]
-    buildLog = true
-    injectJar = false
-    enable = true
-    runVariant = "debug"
-}
-
+apply from: "./pluginconfig.gradle"
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
