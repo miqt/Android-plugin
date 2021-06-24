@@ -2,7 +2,7 @@ apply plugin: 'maven'
 apply plugin: 'com.github.panpf.bintray-publish'
 
 
-def maven_version = "0.3.7"
+def maven_version = "0.3.8"
 def maven_groupId = 'com.miqt'
 
 //下面的version和group必须有，gradle打包的pom文件依赖这个版本号和group
