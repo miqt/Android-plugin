@@ -228,7 +228,6 @@ public abstract class BasePlugin<E extends Extension> extends Transform implemen
 
     private void weaveSingleJarToFile(File file, File dest) throws IOException {
         waitableExecutor.execute((Callable<Object>) () -> {
-            logger.log("Thread Name= " + Thread.currentThread().getName());
             if (dest.exists()) {
                 FileUtils.forceDelete(dest);
             }
@@ -334,7 +333,6 @@ public abstract class BasePlugin<E extends Extension> extends Transform implemen
 
     public final void weaveSingleClassToFile(File inputFile, File outputFile) throws IOException {
         waitableExecutor.execute(() -> {
-            logger.log("Thread Name= " + Thread.currentThread().getName());
             if (!isNotRun && inputFile.getName().endsWith(".class")) {
                 FileUtils.touch(outputFile);
                 byte[] classByte = FileUtils.readFileToByteArray(inputFile);

@@ -37,9 +37,11 @@ public class AutoTryCatchPlugin extends BasePlugin<AutoTryCatchExtension> {
                 if (className.equals(getExtension().handleClass)) {
                     return mv;
                 }
+
+                getLogger().log("\t" + className);
                 return new AddTryCatchAdviceAdapter(ASM5, mv, access, name,
                         descriptor, getExtension().getHandleClass(),
-                        getExtension().getHandleMethod());
+                        getExtension().getHandleMethod(), getLogger());
             }
         }, ClassReader.EXPAND_FRAMES);
         return cw.toByteArray();
